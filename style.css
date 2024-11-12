@@ -1,23 +1,62 @@
+body{
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.5;
+    color: #333;
+    /* background-color: #e7eff7; */
+}
+.inicio{
+    background: url('./img/ajaEntrada.jpeg') center center/cover no-repeat, #e0f7fa; 
+}
 .container {
+    /* background-color: rgba(255, 255, 255, 0.493); */ /* Fondo blanco semi-transparente para resaltar el contenido */
+    padding: 5px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 .menu-option {
-    width: 30%;
+    width: 50%;
     height: auto;
     margin: 20px auto;
     padding: 15px 30px;
     border: 2px solid #ddd;
     border-radius: 15px;
+    font-size: 17px;
+    color: blue;
     text-align: center;
     background-color: #f8f9fa;
-    transition: background-color 0.5s;
+    transition: background-color 0.5 transform 0.2s;
+    font-weight: bold;
 }
 
 .menu-option:hover {
-    background-color: #e9ecef;
+    background-color: #cfe8fc;
+    transform: scale(1.05);
+    color: #1a5276 ;
+    border: 2px solid #1a5276;
     cursor: pointer;
 }
 
 .colorTitulo{
-    color: blue;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 50px;
+    text-align: center;
+    color: rgb(78, 89, 247);
+}
+/* .menu-option:hover::before {
+    content: "🎄 ";
+    display: inline-block;
+    margin-right: 5px;
+    animation: shake 0.3s ease-in-out infinite alternate;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(5px); }
+} */
+@media (max-width: 768px) {
+    .menu-option {
+        width: 80%;
+    }
 }
