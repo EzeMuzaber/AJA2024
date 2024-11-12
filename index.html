@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Opciones</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1 class="mb-4 colorTitulo">Bienvenido al Menú de AJA</h1>
+        <p>Selecciona una opción para más detalles:</p>
+
+        <div class="menu-option" onclick="openPage('pages/NuestraHistoria.html')">
+            Nuestra Historia
+        </div>
+        <div class="menu-option" onclick="openPage('pages/MenuVenta.html')">
+            🎄 Menú de Venta Navideño🎄
+        </div>
+        
+        <div class="menu-option" onclick="showMenu('promociones')">
+            🏷️ AJA Comunidad
+        </div>
+        <div class="menu-option" onclick="openPage('pages/NuestroEquipo.html')">
+            📍 Nuestro Equipo
+        </div>
+        <div class="menu-option" onclick="showMenu('ubicacion')">
+            📍 Fotos
+        </div>
+        
+        <div class="menu-option" onclick="showMenu('ayuda')">
+            Nuestra pagina
+        </div>
+
+        <div class="menu-option" onclick="showMenu('contacto')">
+            📞 Contacto
+        </div>
+    </div>
+
+    <!-- Modal para mostrar información -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Información</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body" id="modalContent">
+                    <!-- Contenido dinámico aquí -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showMenu(option) {
+            let content = '';
+            switch(option) {
+                case 'navidad':
+                    content = '<h2>Menú de Venta Navideño</h2><p>Aquí podrás ver nuestras ofertas especiales para esta temporada navideña.</p>';
+                    break;
+                case 'promociones':
+                    content = '<h2>Promociones Especiales</h2><p>Descubre nuestras promociones exclusivas disponibles por tiempo limitado.</p>';
+                    break;
+                case 'contacto':
+                    content = '<h2>Contacto</h2><p>Puedes contactarnos al +123 456 789 o enviarnos un correo a info@ejemplo.com.</p>';
+                    break;
+                case 'ubicacion':
+                    content = '<h2>Ubicación</h2><p>Nos encontramos en Av. Principal 123, Ciudad.</p>';
+                    break;
+                case 'ayuda':
+                    content = '<h2>Ayuda</h2><p>¿Necesitas ayuda? Estamos aquí para asistirte en lo que necesites.</p>';
+                    break;
+            }
+            document.getElementById('modalContent').innerHTML = content;
+            new bootstrap.Modal(document.getElementById('infoModal')).show();
+        }
+        function openPage(pageUrl) {
+            window.location.href = pageUrl; // Abre la página en la misma ventana
+            // window.open(pageUrl, '_blank'); // Si prefieres abrir en una nueva pestaña
+        }
+    </script>
+</body>
+</html>
