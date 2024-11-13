@@ -1,11 +1,17 @@
 body{
+    /* background: url('./img/lucesFondo.jpeg') center center/cover no-repeat; */
     font-family:  Georgia, Times, 'Times New Roman', serif;
     line-height: 1.5;
     color: #333;
-    /* background-color: #e7eff7; */
+    background-color: #97f586;
 }
 .inicio{
     background: url('./img/ajaEntrada.jpeg') center center/cover no-repeat, #e0f7fa; 
+}
+.menu1{
+    /* background: url('./img/11258.jpg') center center/cover no-repeat; */
+
+    background-color: #d65151;
 }
 .container {
     /* background-color: rgba(255, 255, 255, 0.493); */ /* Fondo blanco semi-transparente para resaltar el contenido */
@@ -45,6 +51,63 @@ body{
     text-align: center;
     color: rgb(78, 89, 247);
 }
+.nav-buttons .btn {
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+.nav-buttons .btn:hover {
+    background-color: white;
+    color: #007bff; /* Azul navideño */
+}
+.menu-section {
+    width: 80%;
+    margin-top: 40px;
+    margin-left: 10%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+.menu-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ffeb3b; /* Amarillo festivo */
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 8px 0px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+.menu-item h4 {
+    font-weight: bold;
+    color: #9002fd; /* Dorado */
+}
+.menu-item .dish {
+    /* margin-right: 30px; */
+    font-weight: bold;
+    flex:1;
+    /* text-align: right; */
+    color: #9002fd;
+}
+.menu-item .price {
+    /* margin-left: 90px; */
+    margin-right: 8%;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #761a71;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 /* .menu-option:hover::before {
     content: "🎄 ";
     display: inline-block;
@@ -58,5 +121,12 @@ body{
 @media (max-width: 768px) {
     .menu-option {
         width: 80%;
+    }
+    .menu1 {
+        width: 85%;
+    }
+    .menu-section {
+        width: 85%;
+        margin-left: 6%;
     }
 }
