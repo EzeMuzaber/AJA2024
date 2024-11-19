@@ -290,7 +290,7 @@ body {
 
 
 /* Celulares */
-@media (max-width: 375px) {
+@media (max-width: 425px) {
 
   body {
       background-size: contain; /* Ajusta el fondo para que no se corte */
