@@ -14,7 +14,7 @@
 
 <body>
     <div class="inicio">
-        <div class="container text-center">
+        <div class="container"> <!-- text-center -->
             <h1 class="mb-4 colorTitulo">Bienvenido al Menú de AJA</h1>
             <p class="mb-4 parrafoPrincipal">Selecciona una opción para más detalles:</p>
 
@@ -62,35 +62,93 @@
             </div>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function showMenu(option) {
-            let content = '';
-            switch (option) {
-                case 'navidad':
-                    content = '<h2>Menú de Venta Navideño</h2><p>Aquí podrás ver nuestras ofertas especiales para esta temporada navideña.</p>';
-                    break;
-                case 'promociones':
-                    content = '<h2>Promociones Especiales</h2><p>Descubre nuestras promociones exclusivas disponibles por tiempo limitado.</p>';
-                    break;
-                case 'contacto':
-                    content = '<h2>Contacto</h2><p>Puedes contactarnos al +123 456 789 o enviarnos un correo a info@ejemplo.com.</p>';
-                    break;
-                case 'ubicacion':
-                    content = '<h2>Ubicación</h2><p>Nos encontramos en Av. Principal 123, Ciudad.</p>';
-                    break;
-                case 'ayuda':
-                    content = '<h2>Ayuda</h2><p>¿Necesitas ayuda? Estamos aquí para asistirte en lo que necesites.</p>';
-                    break;
-            }
-            document.getElementById('modalContent').innerHTML = content;
-            new bootstrap.Modal(document.getElementById('infoModal')).show();
-        }
-        function openPage(pageUrl) {
-            window.location.href = pageUrl; // Abre la página en la misma ventana
-            // window.open(pageUrl, '_blank'); // Si prefieres abrir en una nueva pestaña
-        }
-    </script>
+    <!-- FOOTER -->
+    <footer class="footer bg-dark text-light py-4">
+        <div class="container text-center">
+            <h3>Contactanos</h3>
+            <div class="contact-item">
+                <a href="https://wa.me/541138789419" target="_blank" class="text-light">
+                    <img src="../img/whatsapp.png" alt="WhatsApp" class="icon"> 
+                    <span> 11 3878 9419</span>
+                </a>
+            </div>
+            <div class="contact-item">
+                <img src="../img/gmail.png" alt="Correo" class="icon">
+                <span><a href="mailto:ajacap@gmail.com" class="text-light">ajacap@gmail.com</a></span>
+            </div>
+            <div class="contact-item">
+                <img src="../img/map.png" alt="Mapa" class="icon">
+                <span>Av. Gral. Francisco Fernández de la Cruz 2875, CABA</span>
+            </div>
+            <div class="social-media">
+                <h3>Seguinos en:</h3>
+                <a href="https://www.facebook.-com/ejemplo" target="_blank" class="social-link">
+                    <img src="../img/facebook.png" alt="Facebook" class="icon">
+                </a>
+                <a href="https://www.instagram.-com/.-ejemplo-." target="_blank" class="social-link">
+                    <img src="../img/instagram.png" alt="Instagram" class="icon">
+                </a>
+                <a href="https://twitter.-com/ejemplo" target="_blank" class="social-link">
+                    <img src="../img/linkedin.png" alt="Linkedin" class="icon">
+                </a>
+                <a href="https://.twitter.-com/ejemplo" target="_blank" class="social-link">
+                    <img src="../img/spotify.png" alt="Spotify" class="icon">
+                </a>
+            </div>
+            <hr class="footer-divider">
+            <p class="footer-copy">&copy; 2024 Ezequiel Muzaber - Asociación Juvenil Araucana - Todos los derechos reservados</p>
+        </div>
+    </footer>
+    <!-- FIN FOOTER -->
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showMenu(option) {
+        let content = '';
+        switch (option) {
+            case 'navidad':
+                content = '<h2>Menú de Venta Navideño</h2><p>Aquí podrás ver nuestras ofertas especiales para esta temporada navideña.</p>';
+                break;
+            case 'promociones':
+                content = '<h2>AJA Comunidad</h2><p>en proceso</p>';
+                break;
+            case 'contacto':
+                content = `
+        <h2>Contacto</h2>
+        <p>¡Estamos aquí para ayudarte! Puedes contactarnos a través de los siguientes medios:</p>
+        <ul>
+            <li>
+                <strong>Correo electrónico:</strong> 
+                <a href="mailto:ajacap@gmail.com">ajacap@gmail.com</a>
+            </li>
+            <li>
+                <strong>WhatsApp:</strong> 
+                <a href="https://wa.me/541138789419" target="_blank">+54 11 3878 9419</a>
+            </li>
+            <li>
+                <strong>Teléfono:</strong> 
+                <a href="tel:4918-3271">4918-3271</a>
+            </li>
+            <li>
+                <strong>Dirección:</strong> 
+                Av. Gral. Francisco Fernández de la Cruz 2875, CABA
+            </li>
+        </ul>
+    `;
+                break;
+            case 'ubicacion':
+                content = '<h2>Fotos</h2><p> parte en proceso</p>';
+                break;
+            case 'ayuda':
+                content = '<h2>Nuestra Pagina</h2><p>parte en proceso</p>';
+                break;
+        }
+        document.getElementById('modalContent').innerHTML = content;
+        new bootstrap.Modal(document.getElementById('infoModal')).show();
+    }
+    function openPage(pageUrl) {
+        window.location.href = pageUrl; // Abre la página en la misma ventana
+    }
+</script>
 
 </html>

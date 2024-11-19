@@ -1,22 +1,21 @@
 body {
-  background: url("./img/FONDO3.jpeg") center center/cover no-repeat;
-  background-size: cover;
   font-family: Georgia, Times, "Times New Roman", serif;
   line-height: 1.5;
   color: #333;
-  /* background-color: #97f586; */
+
 }
 .inicio {
   background: url("./img/ajaEntrada.jpeg") center center/cover no-repeat,
     #e0f7fa;
+
+}
+.fondoVenta {
+  background: url("./img/FONDO3.jpeg") center center/cover no-repeat;
 }
 .menu1 {
-  /* background: url('./img/11258.jpg') center center/cover no-repeat; */
   background-color: #d65151;
 }
 .container {
-  /* background-color: rgba(255, 255, 255, 0.493); */ /* Fondo blanco semi-transparente para resaltar el contenido */
-  padding: 5px;
   border-radius: 30px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -59,7 +58,8 @@ body {
     rgba(84, 156, 209, 1) 89%,
     rgba(242, 211, 211, 1) 98%
   );
-  width: 60%;
+  border-radius: 25%;
+  width: 58%;
   margin-left: 20%;
 }
 .nav-buttons .btn {
@@ -80,7 +80,8 @@ body {
   text-align: center;
   color: #f8f9fa;
   background: rgb(84, 156, 209);
-  width: 50%;
+  border-radius: 30%;
+  width: 48%;
   margin-left: 25%;
 }
 .menu-section {
@@ -143,7 +144,11 @@ body {
     0% { transform: translateX(0); }
     100% { transform: translateX(5px); }
 } */
-
+.tituloCombo {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #c31313;
+}
 .combo-item {
   display: flex;
   justify-content: space-between;
@@ -152,9 +157,13 @@ body {
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 15px;
-  color: #0f1042;
+  color: #fefefe;
   font-size: 1.4em;
+  font-weight: bold;
   text-align: left;
+}
+.combo-item p {
+  color: #000000;
 }
 .combo-description {
   flex: 1;
@@ -193,6 +202,60 @@ body {
   margin-left: 20%;
 }
 
+ /* FOOTER */
+.footer {
+  background-color: #333; /* Fondo oscuro */
+  color: #f1f1f1;         /* Color del texto */
+  padding: 20px 0;        /* Espaciado interno */
+  text-align: center;
+}
+
+.footer a {
+  color: #ffdd57;         /* Color del enlace */
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffd700;         /* Color al pasar el mouse */
+  text-decoration: underline;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;              /* Espaciado entre icono y texto */
+  margin: 10px 0;
+  font-size: 1.2rem;      /* Tamaño de fuente más grande */
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.2); /* Animación de hover */
+}
+
+.footer-divider {
+  border-top: 1px solid #555;
+  margin: 20px 0;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin: 10px 0 0;
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
   .menu-option {
     width: 80%;
@@ -222,5 +285,122 @@ body {
   }
   .parrafoPrincipal {
     font-size: 1em;
+  }
+}
+
+
+/* Celulares */
+@media (max-width: 375px) {
+
+  body {
+      background-size: contain; /* Ajusta el fondo para que no se corte */
+  }
+    /* Título principal */
+    .menu1 h1 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+  }
+
+  /* Títulos de las secciones */
+  .menu-section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+  }
+
+  /* Botones de navegación */
+  .nav-buttons {
+      display: flex;
+      flex-direction: column; /* Cambia a diseño en columna */
+      gap: 15px; /* Espacio entre botones */
+  }
+
+  .nav-buttons a {
+      font-size: 1rem;
+      padding: 10px 15px;
+      border-radius: 20px; /* Botones más redondeados */
+      background-color: rgba(242, 80, 80, 0.8); /* Fondo más claro */
+      color: #007bff; /* Color de texto azul */
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+  }
+
+  .nav-buttons a:hover {
+      background-color: #0078f9; /* Fondo azul al pasar el mouse */
+      color: #0f0e0e; /* Texto blanco */
+  }
+
+  /* Secciones del menú */
+  .menu-section {
+      padding: 15px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+  }
+  .numeroCombo {
+    font-size: 1em;
+    width: 100%;
+    margin-left: 0%;
+  }
+  /* Items del menú */
+  .menu-item {
+      flex-direction: column; /* Diseño vertical */
+      align-items: flex-start;
+      padding: 10px;
+      margin-bottom: 10px;
+      /* background-color: rgba(255, 255, 255, 0.1); */
+      border-radius: 10px;
+  }
+
+  .menu-item .dish {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #010000;
+  }
+
+  .menu-item .price {
+      font-size: 0.9rem;
+      background-color: #ff5722;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 10px;
+      align-self: flex-end;
+  }
+
+  /* Ajustes en combos */
+  .combo-item {
+      flex-direction: column;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 15px;
+      font-size: 1rem;
+  }
+
+  .combo-description {
+      margin-bottom: 10px;
+  }
+
+  .combo-price {
+      font-size: 0.9rem;
+      padding: 5px 15px;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 10px;
+      text-align: center;
+  }
+
+  /* Footer */
+  footer {
+      text-align: center;
+      font-size: 0.9rem;
+  }
+  .contact-item {
+    font-size: 0.9rem;      
+  }
+  .whatsapp-icon {
+      width: 35px; /* Ícono más pequeño */
+      height: 35px;
+  }
+  /* Ajustar imágenes e íconos */
+  img {
+      max-width: 100%; /* Escala las imágenes al tamaño del contenedor */
+      height: auto;
   }
 }
